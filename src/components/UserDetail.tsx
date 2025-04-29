@@ -74,39 +74,39 @@ export const UserDetail = () => {
 
         <div className="space-y-4">
           <div className="flex items-center">
-            <div className="w-32 font-semibold">Gender:</div>
+            <div className="w-20 font-semibold">Gender:</div>
             <div>{user.gender}</div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
             <div className="w-full sm:w-32 font-semibold mb-1 sm:mb-0">Name:</div>
-            <div className="flex flex-col sm:flex-row gap-2 w-full">
+            <div className="flex flex-row flex-nowrap gap-2 w-full overflow-x-auto">
               <input
                 type="text"
                 value={editedName.title}
                 onChange={(e) => handleNameChange('title', e.target.value)}
-                className="p-2 border rounded w-full sm:w-20"
+                className="p-2 border rounded w-20 sm:w-20 flex-shrink-0"
                 placeholder="Title"
               />
               <input
                 type="text"
                 value={editedName.first}
                 onChange={(e) => handleNameChange('first', e.target.value)}
-                className="p-2 border rounded w-full sm:w-32"
+                className="p-2 border rounded w-24 sm:w-32 flex-shrink-0"
                 placeholder="First Name"
               />
               <input
                 type="text"
                 value={editedName.last}
                 onChange={(e) => handleNameChange('last', e.target.value)}
-                className="p-2 border rounded w-full sm:w-32"
+                className="p-2 border rounded w-24 sm:w-32 flex-shrink-0"
                 placeholder="Last Name"
               />
             </div>
           </div>
 
           <div className="flex items-center">
-            <div className="w-32 font-semibold">Age:</div>
+            <div className="w-10 font-semibold">Age:</div>
             <div>{user.dob.age} years old (born in {birthYear})</div>
           </div>
 
