@@ -53,8 +53,8 @@ export const UserDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="relative max-w-2xl w-full bg-white rounded-lg shadow-lg p-4 sm:p-8 flex flex-col items-center mx-auto">
+    <div className="w-full min-h-screen flex items-center justify-center p-8 bg-gray-100">
+      <div className="relative max-w-2xl w-full bg-white rounded-lg shadow-lg p-4 sm:p-8 flex flex-col items-center">
         <div className="mb-6 w-full flex justify-start">
           <button
             onClick={() => navigate(-1)}
