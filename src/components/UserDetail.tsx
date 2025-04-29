@@ -54,7 +54,7 @@ export const UserDetail = () => {
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center p-8 bg-gray-100">
-      <div className="relative max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 flex flex-col items-center">
+      <div className="relative max-w-2xl w-full bg-white rounded-lg shadow-lg p-4 sm:p-8 flex flex-col items-center">
         <div className="mb-6 w-full flex justify-start">
           <button
             onClick={() => navigate(-1)}
@@ -78,29 +78,31 @@ export const UserDetail = () => {
             <div>{user.gender}</div>
           </div>
 
-          <div className="flex items-center gap-2">
-            <div className="w-32 font-semibold">Name:</div>
-            <input
-              type="text"
-              value={editedName.title}
-              onChange={(e) => handleNameChange('title', e.target.value)}
-              className="p-2 border rounded w-20"
-              placeholder="Title"
-            />
-            <input
-              type="text"
-              value={editedName.first}
-              onChange={(e) => handleNameChange('first', e.target.value)}
-              className="p-2 border rounded w-32"
-              placeholder="First Name"
-            />
-            <input
-              type="text"
-              value={editedName.last}
-              onChange={(e) => handleNameChange('last', e.target.value)}
-              className="p-2 border rounded w-32"
-              placeholder="Last Name"
-            />
+          <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
+            <div className="w-full sm:w-32 font-semibold mb-1 sm:mb-0">Name:</div>
+            <div className="flex flex-col sm:flex-row gap-2 w-full">
+              <input
+                type="text"
+                value={editedName.title}
+                onChange={(e) => handleNameChange('title', e.target.value)}
+                className="p-2 border rounded w-full sm:w-20"
+                placeholder="Title"
+              />
+              <input
+                type="text"
+                value={editedName.first}
+                onChange={(e) => handleNameChange('first', e.target.value)}
+                className="p-2 border rounded w-full sm:w-32"
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                value={editedName.last}
+                onChange={(e) => handleNameChange('last', e.target.value)}
+                className="p-2 border rounded w-full sm:w-32"
+                placeholder="Last Name"
+              />
+            </div>
           </div>
 
           <div className="flex items-center">
