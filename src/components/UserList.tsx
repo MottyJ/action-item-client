@@ -62,7 +62,7 @@ export const UserList = ({ users, isSaved = false }: UserListProps) => {
             <h3 className="text-xl">No users found</h3>
           </div>
         ) : (
-          <div className="bg-white rounded-xl shadow divide-y divide-gray-200 max-w-2xl w-full mt-4">
+          <div className="bg-white rounded-xl shadow divide-y divide-gray-200 max-w-2xl w-full mt-4 overflow-y-auto" style={{ maxHeight: '80vh' }}>
             {filteredUsers.map((user) => (
               <div
                 key={user.id || user.email}
